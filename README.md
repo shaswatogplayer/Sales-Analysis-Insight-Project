@@ -1,5 +1,5 @@
 
-### Sales Analysis Project
+# Sales Analysis Project
 ## Overview
 This project performs a comprehensive sales analysis by leveraging SQL, Excel, and Power BI. It covers customer records, transactions, revenue generation, and market-specific insights. The analysis focuses on critical dimensions such as time (year, month), markets, and currency. Visualizations are created using Power BI to provide an interactive and insightful representation of the data.
 
