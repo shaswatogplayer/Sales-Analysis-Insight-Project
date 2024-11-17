@@ -1,43 +1,53 @@
 
-### Data Analysis Using SQL
+### Sales Analysis Project
+## Overview
+This project performs a comprehensive sales analysis by leveraging SQL, Excel, and Power BI. It covers customer records, transactions, revenue generation, and market-specific insights. The analysis focuses on critical dimensions such as time (year, month), markets, and currency. Visualizations are created using Power BI to provide an interactive and insightful representation of the data.
 
-1. Show all customer records
+# Key Features
+Customer Insights:
 
-    `SELECT * FROM customers;`
+Display all customer records.
 
-1. Show total number of customers
+Count the total number of customers.
 
-    `SELECT count(*) FROM customers;`
+Market-Specific Analysis:
 
-1. Show transactions for Chennai market (market code for chennai is Mark001
+Analyze transactions specific to markets, such as Chennai (Market Code: Mark001).
 
-    `SELECT * FROM transactions where market_code='Mark001';`
+Identify products sold in specific markets.
 
-1. Show distrinct product codes that were sold in chennai
+Currency-Based Analysis:
 
-    `SELECT distinct product_code FROM transactions where market_code='Mark001';`
+Filter transactions based on currency (e.g., USD, INR).
 
-1. Show transactions where currency is US dollars
+# Time-Specific Analysis:
 
-    `SELECT * from transactions where currency="USD"`
+Aggregate transactions by year, month, and other time-based filters.
 
-1. Show transactions in 2020 join by date table
+Focus on yearly revenue and market-specific revenue.
 
-    `SELECT transactions.*, date.* FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020;`
+# Interactive Dashboards:
 
-1. Show total revenue in year 2020,
+Visualize sales data with Power BI for better insights and decision-making.
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.currency="INR\r" or transactions.currency="USD\r";`
-	
-1. Show total revenue in year 2020, January Month,
+# Tools and Technologies
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");`
+# SQL:
 
-1. Show total revenue in year 2020 in Chennai
+Used for querying and analyzing transactional data.
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020
-and transactions.market_code="Mark001";`
+Joins and aggregations to extract actionable insights.
 
+# Excel:
+
+Data cleaning and exploratory analysis.
+
+Summary tables and pivot charts for quick insights.
+
+# Power BI:
+Created visualizations and dashboards for dynamic analysis.
+
+Highlighted key performance indicators (KPIs) such as revenue and customer metrics.
 
 Data Analysis Using Power BI
 ============================
